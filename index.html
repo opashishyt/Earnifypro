@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Earnify Pro</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ccapture.js"></script>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox">
+  <h2>Login</h2>
+  <input id="username" placeholder="Enter Username">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- APP -->
+<div class="container" id="app" style="display:none">
+
+  <h1>💸 Earnify Pro</h1>
+
+  <div class="card">
+    <h2 id="userDisplay"></h2>
+    <h1 id="money">₹0</h1>
+  </div>
+
+  <button onclick="downloadScreenshot()">📸 Screenshot</button>
+  <button onclick="shareTelegram()">📲 Telegram</button>
+  <button onclick="buyPremium()">💰 Premium</button>
+
+  <button onclick="generateReel()">🎬 Reel Image</button>
+  <button onclick="generateVideo()">🎥 Reel Video</button>
+
+  <canvas id="chart"></canvas>
+
+  <div class="card">
+    <h2>🏆 Leaderboard</h2>
+    <ul id="leaderboard"></ul>
+  </div>
+
+  <p style="color:#aaa"> only earning</p>
+
+</div>
+
+<canvas id="reelCanvas" width="400" height="700" style="display:none"></canvas>
+
+<script src="db.js"></script>
+<script src="script.js"></script>
+<script src="video.js"></script>
+
+</body>
+</html>
